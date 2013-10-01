@@ -27,7 +27,7 @@ class netbeans(
       }
       -> exec{"install_netbeans_${netbeans_version}":
         command => "/bin/bash /tmp/netbeans-${netbeans_version}-linux.sh ${options}",
-        unless  => "/usr/bin/test -d /opt/netbeans/${netbeans_version}/",
+        unless  => "/usr/bin/test -d /opt/netbeans/${netbeans_version}/bin/",
       }
     }
     else{
